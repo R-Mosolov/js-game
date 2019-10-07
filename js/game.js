@@ -24,7 +24,20 @@ document.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowRight') {
         console.log(hero.getBoundingClientRect().x);
 
-        hero.style.width = 60;
+        hero.style.marginLeft = 50;
         console.log(hero.getBoundingClientRect().x);
     }
+});
+
+// Chosing Hero Details
+const avatar = document.querySelector('.setup-open-icon');
+const heroMenu = document.querySelector('.setup');
+const closeMenu = document.querySelector('.setup-close');
+
+avatar.addEventListener('click', function () {
+    heroMenu.classList.toggle('hidden');
+});
+
+closeMenu.addEventListener('click', function () {
+    heroMenu.classList.add('hidden')
 });
